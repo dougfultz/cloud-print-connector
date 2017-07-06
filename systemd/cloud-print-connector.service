@@ -11,7 +11,7 @@ After=cups.service avahi-daemon.service network-online.target
 Wants=cups.service avahi-daemon.service network-online.target
 
 [Service]
-ExecStart=/opt/cloud-print-connector/gcp-cups-connector -config-filename /opt/cloud-print-connector/gcp-cups-connector.config.json
+ExecStart=/usr/local/go/bin/gcp-cups-connector -config-filename /etc/cloud-print-connector/gcp-cups-connector.config.json
 Restart=on-failure
 User=cloud-print-connector
 
